@@ -89,7 +89,7 @@
 						<div class="container 75% gallery">
 							<div class="row 0% images">
 								<div class="6u"><a href="images/fulls/01.jpg" class="image fit from-left"><img src="images/thumbs/01.jpg" title="Pysub-dl: Terminal movie subtitle downloader" alt="" /><strong>Pysub-dl</strong></a></div>
-								<div class="6u"><a href="images/fulls/02.jpg" class="image fit from-right"><img src="images/thumbs/02.jpg" title="Vid2mp3: Terminal ONline video to mp3 downloader" alt="" /><strong>Vid2mp3</strong></a></div>
+								<div class="6u"><a href="images/fulls/02.jpg" class="image fit from-right"><img src="images/thumbs/02.jpg" title="Vid2mp3: Terminal Online video to mp3 downloader" alt="" /><strong>Vid2mp3</strong></a></div>
 							</div>
 							<div class="row 0% images">
 								<div class="6u"><a href="images/fulls/03.jpg" class="image fit from-left"><img src="images/thumbs/03.jpg" title="Deacptcha - Flipkart.com's captcha cracker" alt="" /><strong>Deacptcha</strong></a></div>
@@ -110,18 +110,18 @@
 			
 		<!-- Contact -->
 			<section id="contact" class="main style3 secondary">
-				<div class="content container">
+				<div class="content container" id="form">
 					<header>
 						<h2>Say Hello.</h2>
 						<p>Shoot me an email to: iamsudip[at]programmer[dot]net or you can use this form (not ready yet) to contact me.</p>
 					</header>
-					<div class="box container 75%">
+					<div class="content container 75%">
 					
 					<!-- Contact Form -->
-							<form method="post" action=".">
+							<form method="post" action="." target="uploader_iframe">
 								<div class="row 50%">
 									<div class="6u"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="6u"><input type="email" name="email" placeholder="Email" /></div>
+									<div class="6u"><input type="text" name="email" placeholder="Email" /></div>
 								</div>
 								<div class="row 50%">
 									<div class="12u"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
@@ -129,12 +129,26 @@
 								<div class="row">
 									<div class="12u">
 										<ul class="actions">
-											<li><input type="submit" value="Send Message" /></li>
+											<li><input type="submit" value="Send Message" onclick="ButtonClicked()" /></li>
 										</ul>
 									</div>
 								</div>
 							</form>
+							<iframe id="uploader_iframe" name="uploader_iframe" style="display: none;"></iframe>
 
+					</div>
+				</div>
+				
+				<div id="after_message" class="content container" style="display:none;">
+					<header>
+						<h2>Your message has been sent.</h2>
+					</header>
+					<div class="row">
+						<div class="12u">
+							<ul class="actions">
+								<li><input type="submit" value="Send Another Message" onclick="RestoreSubmitButton()" /></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -151,6 +165,22 @@
 					</ul>
 			
 			</footer>
+
+			<script type="text/javascript">
+				function ButtonClicked()
+				{
+				   document.getElementById("form").style.display = "none"; // to undisplay
+				   document.getElementById("after_message").style.display = ""; // to display
+				   return true;
+				}
+				function RestoreSubmitButton()
+				{
+				   document.getElementById("form").style.display = ""; // to display
+				   document.getElementById("after_message").style.display = "none"; // to display
+				   return true;
+				}
+
+			</script>
 
 	</body>
 </html>
