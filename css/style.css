@@ -286,7 +286,7 @@
 				width: 100%;
 				padding: 0.65em 0.75em;
 				background: none;
-				border: solid 2px rgba(185,186,187,0.25);
+				border: solid 2px rgba(0,0,0,0.25);
 				color: inherit;
 				border-radius: 0.5em;
 				outline: none;
@@ -324,23 +324,23 @@
 			}
 
 			form .formerize-placeholder {
-				color: rgba(145,146,147,0.85) !important;
+				color: rgba(0,0,0,0.85) !important;
 			}
 
 			form ::-webkit-input-placeholder {
-				color: rgba(145,146,147,0.85) !important;
+				color: rgba(0,0,0,0.85) !important;
 			}
 
 			form :-moz-placeholder {
-				color: rgba(145,146,147,0.85) !important;
+				color: rgba(0,0,0,0.85) !important;
 			}
 
 			form ::-moz-placeholder {
-				color: rgba(145,146,147,0.85) !important;
+				color: rgba(0,0,0,0.85) !important;
 			}
 
 			form :-ms-input-placeholder {
-				color: rgba(145,146,147,0.85) !important;
+				color: rgba(0,0,0,0.85) !important;
 			}
 
 			form ::-moz-focus-inner {
